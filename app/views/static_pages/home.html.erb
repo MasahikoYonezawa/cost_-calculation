@@ -1,0 +1,48 @@
+<div class="center jumbotron">
+  <h2>料金改定後の月額合計費用を計算することができます</h2>
+  <hr/>
+  <div id="form">
+    <%=form_tag(static_pages_calc_path, method: :post, remote: true) do %>
+      <div class="plan_form">
+        <p>新規プランを選択してください</p>
+        <%= radio_button_tag :plan, 1, true  %>
+        <%= label_tag(:plan_1, "フリープラン", value: 1) %>
+        <%= radio_button_tag :plan, 2, false  %>
+        <%= label_tag(:plan_2, "ライトプラン", value: 2) %>
+        <%= radio_button_tag :plan, 3 ,false  %>
+        <%= label_tag(:plan_3, "スタンダードプラン", value: 3) %>
+      </div>
+      <div class="old_plan_form">
+        <p>加入中のプランを選択してください</p>
+        <%= radio_button_tag :old_plan, 0, true  %>
+        <%= label_tag(:old_plan_0, "未加入", value: 0) %>
+        <%= radio_button_tag :old_plan, 1, false  %>
+        <%= label_tag(:old_plan_1, "フリープラン", value: 1) %>
+        <%= radio_button_tag :old_plan, 2, false  %>
+        <%= label_tag(:old_plan_2, "ベーシックプラン", value: 2) %>
+        <%= radio_button_tag :old_plan, 3 ,false  %>
+        <%= label_tag(:old_plan_3, "プロプラン", value: 3) %>
+        <%= radio_button_tag :old_plan, 4 ,false  %>
+        <%= label_tag(:old_plan_4, "プロAPIプラン", value: 4) %>
+      </div>
+      
+      <div class="number_form">
+        <%= label_tag(:number, "月間配信通数") %>
+        <%= text_field_tag :number, '', { :size => 25 } %>
+        <%= submit_tag '送信' %>
+      </div>
+    <% end %>
+  </div>
+  <div id="result">
+    <!--<= render partial: "result", locals: { result: @resilt } %>-->
+  </div>
+  <!--<h1>Welcome to the Sample App</h1>-->
+
+  <!--<h2>-->
+  <!--  This is the home page for the-->
+  <!--  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>-->
+  <!--  sample application.-->
+  <!--</h2>-->
+
+  <!--<= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>-->
+</div>
