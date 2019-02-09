@@ -101,6 +101,18 @@ footer {
 }
 
 #result{
-  margin: 5px;
+  margin: 10px;
   font-size: 20px;
 }
+
+.plan_form, .old_plan_form, .number_form{
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: #777777;/*文字色*/
+  background: #FFF;
+  border: solid 3px #777777;/*線*/
+  border-radius: 10px;/*角の丸み*/ 
+}
+
+
